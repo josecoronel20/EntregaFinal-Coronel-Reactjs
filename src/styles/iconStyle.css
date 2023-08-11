@@ -1,0 +1,13 @@
+.iconStyle{
+    cursor: pointer;
+    display: flex;
+    gap: .2rem;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.iconStyle:hover{
+    transform: scale(105%);
+
+}

@@ -1,0 +1,9 @@
+.navbarBot{
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.navbarBot li{
+    list-style: none;
+}
