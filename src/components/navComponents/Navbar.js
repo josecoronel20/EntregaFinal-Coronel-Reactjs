@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/navbar.css";
+import "../../styles/navStyles/navbar.css";
 
 import SearchBar from "./SearchBar";
 import CartWidget from "./CartWidget";

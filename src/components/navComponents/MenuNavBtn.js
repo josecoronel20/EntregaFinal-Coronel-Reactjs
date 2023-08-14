@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/menunavbtn.css";
+import "../../styles/navStyles/menunavbtn.css";
 
 const MenuNavBtn = ({ category }) => {
   return (

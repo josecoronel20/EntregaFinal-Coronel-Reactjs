@@ -1,6 +1,6 @@
 import React from "react";
 import MenuNavBtn from "./MenuNavBtn";
-import "../styles/menunav.css";
+import "../../styles/navStyles/menunav.css";
 
 
 const MenuNav = () => {
@@ -16,13 +16,10 @@ const MenuNav = () => {
           <MenuNavBtn category="Mujer" />
         </li>
         <li>
-          <MenuNavBtn category="Niño" />
+          <MenuNavBtn category="Electrónico" />
         </li>
         <li>
-          <MenuNavBtn category="Accesorios" />
-        </li>
-        <li>
-          <MenuNavBtn category="Contacto" />
+          <MenuNavBtn category="Bijouterie" />
         </li>
       </ul>
   );

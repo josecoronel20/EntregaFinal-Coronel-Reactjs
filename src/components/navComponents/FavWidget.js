@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/iconStyle.css"
+import "../../styles/navStyles/iconStyle.css"
 
 import NumberProducts from "./NumberProducts";
 

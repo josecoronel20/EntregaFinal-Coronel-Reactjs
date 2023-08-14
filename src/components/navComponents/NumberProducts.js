@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/numberProduct.css"
+import "../../styles/navStyles/numberProduct.css"
 
 const NumberProducts = ({ arr }) => {
   // const numArr = arr.length;
