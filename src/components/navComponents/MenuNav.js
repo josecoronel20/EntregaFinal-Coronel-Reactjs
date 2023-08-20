@@ -1,27 +1,26 @@
 import React from "react";
-import MenuNavBtn from "./MenuNavBtn";
+import { Link } from "react-router-dom";
 import "../../styles/navStyles/menunav.css";
 
-
-const MenuNav = () => {
+const MenuNav = ({ style }) => {
   return (
-      <ul className="navbarBot">
-        <li>
-          <MenuNavBtn category="Inicio" />
-        </li>
-        <li>
-          <MenuNavBtn category="Hombre" />
-        </li>
-        <li>
-          <MenuNavBtn category="Mujer" />
-        </li>
-        <li>
-          <MenuNavBtn category="Electrónico" />
-        </li>
-        <li>
-          <MenuNavBtn category="Bijouterie" />
-        </li>
-      </ul>
+    <ul className={style}>
+      <Link to="/">
+        <button>inicio</button>
+      </Link>
+      <Link to="/category/men's clothing">
+        <button>Hombre</button>
+      </Link>
+      <Link to="/category/women's clothing">
+        <button>Mujer</button>
+      </Link>
+      <Link to="/category/electronics">
+        <button>Electronica</button>
+      </Link>
+      <Link to="/category/jewelery">
+        <button>Bijouterie</button>
+      </Link>
+    </ul>
   );
 };
 

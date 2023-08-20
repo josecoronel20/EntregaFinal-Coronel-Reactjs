@@ -9,7 +9,7 @@
   z-index: 50;
   top: 0;
   left: 0;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(241, 241, 241);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -34,6 +34,7 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .logo path{
@@ -43,6 +44,7 @@
 .logo p {
   font-size: 2rem;
   font-weight: bolder;
+  color: #000;
 }
 
 .iconsNavBar {

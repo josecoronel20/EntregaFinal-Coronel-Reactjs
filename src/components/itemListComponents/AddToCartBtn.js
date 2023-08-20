@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/catalogStyles/addToCartBtn.css"
+import "../../styles/itemListStyles/addToCartBtn.css"
 
 
 const AddToCartBtn = () => {

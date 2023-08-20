@@ -4,6 +4,46 @@
     padding: 1rem;
 }
 
+.navbarBot button{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.navbarBot button:hover{
+    transform: scale(105%);
+}
+
 .navbarBot li{
     list-style: none;
 }
+
+.categoryFooter{
+    box-sizing: border-box;
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.categoryFooter button{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+    color: white;
+}
+
+.categoryFooter button:hover{
+    transform: scale(105%);
+}
+
+.categoryFooter li{
+    list-style: none;
+}
+

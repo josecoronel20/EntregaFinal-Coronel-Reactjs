@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Navbar from './components/navComponents/Navbar';
-import Catalog from './components/catalogComponents/Catalog';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <Catalog />
-  </React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
