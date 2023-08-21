@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PreEntrega2-Coronel-Reactjs/static/css/main.c737270d.css",
+    "main.js": "/PreEntrega2-Coronel-Reactjs/static/js/main.ec8bf392.js",
+    "index.html": "/PreEntrega2-Coronel-Reactjs/index.html",
+    "main.c737270d.css.map": "/PreEntrega2-Coronel-Reactjs/static/css/main.c737270d.css.map",
+    "main.ec8bf392.js.map": "/PreEntrega2-Coronel-Reactjs/static/js/main.ec8bf392.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c737270d.css",
+    "static/js/main.ec8bf392.js"
+  ]
+}
