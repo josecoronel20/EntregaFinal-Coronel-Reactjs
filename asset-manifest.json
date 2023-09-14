@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/PreEntrega2-Coronel-Reactjs/static/css/main.9a24cc9a.css",
+    "main.css": "/PreEntrega2-Coronel-Reactjs/static/css/main.b03fe0c9.css",
     "main.js": "/PreEntrega2-Coronel-Reactjs/static/js/main.1af74696.js",
     "index.html": "/PreEntrega2-Coronel-Reactjs/index.html",
-    "main.9a24cc9a.css.map": "/PreEntrega2-Coronel-Reactjs/static/css/main.9a24cc9a.css.map",
+    "main.b03fe0c9.css.map": "/PreEntrega2-Coronel-Reactjs/static/css/main.b03fe0c9.css.map",
     "main.1af74696.js.map": "/PreEntrega2-Coronel-Reactjs/static/js/main.1af74696.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a24cc9a.css",
+    "static/css/main.b03fe0c9.css",
     "static/js/main.1af74696.js"
   ]
 }
