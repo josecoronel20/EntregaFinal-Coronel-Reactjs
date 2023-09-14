@@ -1,0 +1,35 @@
+.quantitySelector{
+    background-color: #f1f1f1;
+    padding: .5rem 1rem;
+    border-radius: 999999px;
+    display: flex;
+    gap: 1rem;
+}
+
+.buttonsQuantity{
+    background-color: #757575;
+    color: #fff;
+    padding: 0 1rem;
+    /* align-items: center;
+    justify-content: center; */
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: .2s;
+}
+
+.buttonsQuantity:hover{
+    transform: scale(110%);
+    background-color: black;
+}
+
+.text{
+    text-align: center;
+}
+
+.text p:last-child{
+    background-color: white;
+    border-radius: 9999px;
+    padding:.2rem .5rem;
+}

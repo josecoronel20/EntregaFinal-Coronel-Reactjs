@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footerContainer">
-        <MenuNav style="categoryFooter" />
+        <MenuNav styleClass="categoryFooter" />
       </div>
     </div>
   );

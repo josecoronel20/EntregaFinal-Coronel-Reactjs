@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import "../../styles/navStyles/numberProduct.css"
+import React from "react";
+import "../../styles/navStyles/numberProduct.css";
+import { CartWidgetContext } from "../../context/CartWidgetContext";
+import { useContext } from "react";
 
 const NumberProducts = ({ arr }) => {
-  // const numArr = arr.length;
+  const  [cart] = useContext(CartWidgetContext);
 
-const [numArr, setNumArr] = useState(arr.length);
+  const numArr = cart
+    ? cart.reduce((acc, current) => {
+        return acc + current.quantity;
+      }, 0)
+    : 0;
 
-  return (
-  <p className="numberProducts">{numArr}</p>
-  )
+  return <p className="numberProducts">{numArr}</p>;
 };
 
 export default NumberProducts;

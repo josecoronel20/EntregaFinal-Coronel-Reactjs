@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
 import "../../styles/itemListStyles/itemListContainer.css";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
+import { collection, getFirestore, getDocs } from "firebase/firestore";
+import Loading from "../itemDetailComponents/Loading";
+import ItemList from "./ItemList";
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { id: categoryName } = useParams();
-  //   console.log(useParams())
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((products) => {
-        if (categoryName) {
-          const filteredProducts = products.filter(
-            (product) => product.category === categoryName
-          );
-          setProducts(filteredProducts);
-        } else {
-          setProducts(products);
-        }
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+    const db = getFirestore();
+
+    const itemCollection = collection(db, "items");
+
+    getDocs(itemCollection).then((snapshot) => {
+      const doc = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+      if (categoryName) {
+        const filteredProducts = doc.filter(
+          (product) => product.category === categoryName
+        );
+        setProducts(filteredProducts);
+      } else {
+        setProducts(doc);
+      }
+    });
   }, [categoryName]);
 
   const location = useLocation();
@@ -31,18 +33,18 @@ const ItemListContainer = () => {
 
   return (
     <div className="itemListContainer">
-      {products.map((product) => (
-        <Link to={`/item/${product.id}`}>
-          <Card
+      {products.length != 0 ? products.map((product) => (
+        <ItemList
           styleCard="card"
-            src={product.image}
-            name={product.title}
-            price={product.price}
-            description={product.description}
-            isDetailPage={isDetailPage}
-          />
-        </Link>
-      ))}
+          src={product.url}
+          name={product.title}
+          price={product.price}
+          description={product.description}
+          isDetailPage={isDetailPage}
+          id={product.id}
+        />
+      )) : <Loading />}
+      
     </div>
   );
 };

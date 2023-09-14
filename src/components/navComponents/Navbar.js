@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navStyles/navbar.css";
 
-import SearchBar from "./SearchBar";
 import CartWidget from "./CartWidget";
-import FavWidget from "./FavWidget";
 import MenuNav from "./MenuNav";
 
 const Navbar = () => {
@@ -25,13 +23,11 @@ const Navbar = () => {
           </svg>
           <p>EAGLE SHOP</p>
         </Link>
-        <SearchBar className="searchbar" />
         <div className="iconsNavBar">
-          <FavWidget />
-          <CartWidget />
+            <CartWidget />
         </div>
       </div>
-      <MenuNav style="navbarBot"/>
+      <MenuNav styleClass="navbarBot" />
     </div>
   );
 };

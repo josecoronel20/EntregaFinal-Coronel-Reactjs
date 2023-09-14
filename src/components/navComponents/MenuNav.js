@@ -2,23 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navStyles/menunav.css";
 
-const MenuNav = ({ style }) => {
+const MenuNav = ({ styleClass }) => {
   return (
-    <ul className={style}>
+    <ul className={styleClass}>
       <Link to="/">
         <button>inicio</button>
       </Link>
-      <Link to="/category/men's clothing">
-        <button>Hombre</button>
+      <Link to="/category/masculino">
+        <button>Masculino</button>
       </Link>
-      <Link to="/category/women's clothing">
-        <button>Mujer</button>
+      <Link to="/category/femenino">
+        <button>Femenino</button>
       </Link>
-      <Link to="/category/electronics">
-        <button>Electronica</button>
+      <Link to="/category/formal">
+        <button>Formal</button>
       </Link>
-      <Link to="/category/jewelery">
-        <button>Bijouterie</button>
+      <Link to="/category/deportivo">
+        <button>Deportivo</button>
       </Link>
     </ul>
   );

@@ -2,21 +2,22 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/navComponents/Navbar";
-import Home from "./routes/Home";
-import ItemList from "./routes/ItemList";
-import Detail from "./routes/Detail"
+import Detail from "./routes/Detail";
 import Footer from "./components/footerComponents/Footer";
+import Checkout from "./routes/Checkout"
+import ItemListContainer from "./components/itemListComponents/ItemListContainer";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/category/:id" element={<ItemList />} />
-        <Route exact path="/item/:id" element={<Detail />} />
-      </Routes>
-      <Footer />
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<ItemListContainer />} />
+          <Route exact path="/category/:id" element={<ItemListContainer />} />
+          <Route exact path="/item/:id" element={<Detail />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+        </Routes>
+        <Footer />
     </BrowserRouter>
   );
 }

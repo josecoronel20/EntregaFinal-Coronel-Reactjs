@@ -1,4 +1,6 @@
 .card {
+  box-sizing: border-box;
+  position: relative;
   width: 200px;
   color: #000;
   background-color: #fff;
@@ -15,6 +17,19 @@
   text-decoration: none;
 }
 
+.fav {
+  right: 5px;
+  position: absolute;
+  opacity: 50%;
+  transition: 0.3s;
+  cursor:pointer;
+}
+
+.fav:hover {
+  opacity: 100%;
+  transform: scale(105%);
+}
+
 .card:hover {
   transform: scale(105%);
 }
@@ -26,8 +41,10 @@
   padding: 15px;
 }
 
-.card .textContainer{
+.card .textContainer {
   width: 100%;
+  color: #000;
+
 }
 
 .card h2 {
@@ -38,7 +55,6 @@
   max-height: 2rem;
   overflow: hidden;
   box-sizing: border-box;
-
 }
 
 .card .description {
@@ -53,42 +69,91 @@
 .card .price {
   font-weight: 500;
   font-size: 1.5rem;
+  color: #000;
+
 }
 
-.itemDetailCard{
+.addToCartBtn{
+  background: none;
+  color: #fff;
+  background-color: #757575;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 999999px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.addToCartBtn:hover{
+  background-color: #000;
+  transform: scale(110%);
+}
+
+.itemDetailCard {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   border-radius: 15px;
   overflow: hidden;
   background-color: #fff;
   gap: 1rem;
 }
 
-.itemDetailCard img{
+.itemDetailCard img {
   padding: 1rem;
   min-width: 250px;
   width: 30%;
   margin: auto;
 }
 
-.itemDetailCard h2,.itemDetailCard p{
+.itemDetailCard h2,
+.itemDetailCard p {
   padding: 0 1rem;
+  color: #000;
+  cursor:default;
 }
 
+.itemDetailCard .description{
+  color: #757575;
+}
 
-.itemDetailCard .price{
+.itemDetailCard .linkContainer, .itemDetailCard .linkContainer .textContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.itemDetailCard .price {
   font-size: 1.4rem;
   font-weight: 500;
 }
 
+.itemDetailCard .addToCartBtn{
+  margin: 1rem;
+}
+
+.addToCartPlusquantity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
-  .itemDetailCard{
+  .itemDetailCard {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
+    text-decoration: none;
+
+  }
+
+  .itemDetailCard .linkContainer{
+    width: 50%;
   }
 }
+

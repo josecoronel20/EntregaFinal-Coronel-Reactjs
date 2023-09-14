@@ -1,40 +1,41 @@
 import React, { useState, useEffect } from "react";
-import Card from "../components/itemListComponents/Card";
+import ItemList from "../components/itemListComponents/ItemList";
 import { useParams } from "react-router-dom";
-import "../styles/ItemDetailStyles/itemDetailContainer.css"
+import "../styles/ItemDetailStyles/itemDetailContainer.css";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import Loading from "../components/itemDetailComponents/Loading"
 
 const Detail = () => {
   const [product, setProduct] = useState(null);
   const { id: itemId } = useParams();
-  console.log(useParams());
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((products) => {
-        if (itemId) {
-          const selectedProduct = products.find(
-            (product) => product.id === parseInt(itemId)
-          );
-          setProduct(selectedProduct);
-        }
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, [itemId]);
+    const db = getFirestore();
 
-  if (!product) {
-    return <div>Loading...</div>;
-  }
+    const itemCollection = collection(db, "items");
+
+    getDocs(itemCollection).then((snapshot) => {
+      const doc = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+      const filteredProducts = doc.find((producto) => producto.id === itemId);
+      setProduct(filteredProducts);
+    });
+  }, [itemId]);
 
   return (
     <div className="itemDetailContainer">
-      <Card
-      styleCard="itemDetailCard"
-        src={product.image}
-        name={product.title}
-        price={product.price}
-        description={product.description}
-      />
+      {product ? (
+        <ItemList
+          styleCard="itemDetailCard"
+          src={product.url}
+          name={product.title}
+          price={product.price}
+          description={product.description}
+          id={product.id}
+        />
+      ) : (
+        <Loading/>
+      )}
     </div>
   );
 };

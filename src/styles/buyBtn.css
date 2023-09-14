@@ -1,0 +1,26 @@
+.buyBtn{
+    background:#6b6b6b;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    color: black;
+    cursor: pointer;
+    transition: .1s;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 900px;
+}
+
+.buyBtn:hover{
+    background-color: green;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.linkBuyBtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
