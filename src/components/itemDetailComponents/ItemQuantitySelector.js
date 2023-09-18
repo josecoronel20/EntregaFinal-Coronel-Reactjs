@@ -18,7 +18,7 @@ const ItemQuantitySelector = ({ productId }) => {
   const handlerAddToCart = () => {
 
     const updateCart = [...cart];
-    updateCart
+    
 
     // if (quantity > 0) {
     //   const updateCart = [...cart];
