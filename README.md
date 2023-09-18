@@ -1,71 +1,33 @@
-# Getting Started with Create React App
+## Mi Proyecto Final
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Componentes
 
-## Available Scripts
+- **BuyBtn**: Maneja la acción de compra en la aplicación. Cuando el usuario hace clic en "Comprar", vacía el carrito y muestra un mensaje de confirmación.
 
-In the project directory, you can run:
+- **Footer**: Componente similar al NavBar pero con un estilo diferente.
 
-### `npm start`
+- **ItemQuantitySelector**: Componente para aumentar o disminuir la cantidad de productos en el contexto CartWidgetContext.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Loading**: Componente que muestra un ícono de carga.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **ItemList**: Componente "card" que muestra todas las propiedades pasadas por el componente padre (ItemListContainer).
 
-### `npm test`
+- **ItemListContainer**: Muestra una lista de productos obtenidos desde Firebase. Permite filtrar por categoría, muestra una pantalla de carga durante la obtención de datos y utiliza el componente ItemList para mostrar los productos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **CartWidget**: Componente del carrito con redirección a la ruta "checkout". Muestra un ícono de carrito junto con el componente NumberProducts que muestra la cantidad de productos en el CartWidgetContext.
 
-### `npm run build`
+- **MenuNav**: Componente que contiene las categorías del NavBar con sus respectivas rutas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **NavBar**: Componente NavBar común.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **NumberProducts**: Componente encargado de sumar la cantidad de productos en el CartWidgetContext.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Rutas
 
-### `npm run eject`
+- **/checkout**: El componente Checkout administra y muestra el carrito de compras, permite eliminar productos y muestra el precio total.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **/detail**: El componente Detail muestra los detalles de un producto específico y utiliza Firebase para acceder a la información. Muestra una pantalla de carga mientras obtiene los datos y luego muestra los detalles del producto.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Context
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# PreEntrega2-Coronel
+- **CartWidgetContext**: El componente CartWidgetProvider crea un contexto llamado CartWidgetContext que proporciona información sobre el carrito de compras a otros componentes de la aplicación. Almacena y gestiona el estado del carrito utilizando el hook useState.
