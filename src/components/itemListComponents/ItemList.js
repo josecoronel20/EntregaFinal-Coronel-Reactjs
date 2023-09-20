@@ -5,24 +5,24 @@ import { CartWidgetContext } from "../../context/CartWidgetContext";
 import ItemQuantitySelector from "../itemDetailComponents/ItemQuantitySelector";
 
 const ItemList = ({ src, name, description, price, styleCard, id }) => {
-  const [cart, setCart] = useContext(CartWidgetContext);
+  // const [cart, setCart] = useContext(CartWidgetContext);
 
-  const addToCart = () => {
-    const itemFound = cart.find((item) => item.id === id);
+  // const addToCart = () => {
+  //   const itemFound = cart.find((item) => item.id === id);
 
-    if (itemFound) {
-      setCart((currentItems) =>
-        currentItems.map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-        )
-      );
-    } else {
-      setCart((currentItems) => [
-        ...currentItems,
-        { id, quantity: 1, price, src, name, description },
-      ]);
-    }
-  };
+  //   if (itemFound) {
+  //     setCart((currentItems) =>
+  //       currentItems.map((item) =>
+  //         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+  //       )
+  //     );
+  //   } else {
+  //     setCart((currentItems) => [
+  //       ...currentItems,
+  //       { id, quantity: 1, price, src, name, description },
+  //     ]);
+  //   }
+  // };
 
   const cardDefault = (
     <div className={styleCard}>
@@ -35,9 +35,9 @@ const ItemList = ({ src, name, description, price, styleCard, id }) => {
         <p className="price">${price}</p>
       </Link>
       <div className="addToCartPlusQuantity">
-        <button className="addToCartBtn" onClick={addToCart}>
+        {/* <button className="addToCartBtn" onClick={addToCart}>
           + Add to cart
-        </button>
+        </button> */}
       </div>
     </div>
   );
@@ -54,9 +54,9 @@ const ItemList = ({ src, name, description, price, styleCard, id }) => {
       </div>
       <div className="addToCartPlusQuantity">
         <ItemQuantitySelector productId={id} />
-        <button className="addToCartBtn" onClick={addToCart}>
+        {/* <button className="addToCartBtn" onClick={addToCart}>
           + Add to cart
-        </button>
+        </button> */}
       </div>
     </div>
   );

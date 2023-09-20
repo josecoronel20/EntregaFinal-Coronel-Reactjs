@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { CartWidgetProvider } from "./context/CartWidgetContext";
-
+import { ProductsFirebaseProvider } from "./context/ProductsFirebaseContext";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -26,9 +26,11 @@ const app = initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <CartWidgetProvider>
-      <App />
-    </CartWidgetProvider>
+    <ProductsFirebaseProvider>
+      <CartWidgetProvider>
+        <App />
+      </CartWidgetProvider>
+    </ProductsFirebaseProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

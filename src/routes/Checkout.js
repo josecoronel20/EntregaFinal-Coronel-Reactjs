@@ -9,7 +9,6 @@ const Checkout = () => {
 
   const handleDelete = (e) => {
     const idX = e.target.id;
-
     const productDelete = cart.find((product) => product.id == idX);
 
     if (productDelete.quantity > 1) {
@@ -24,20 +23,20 @@ const Checkout = () => {
     }
   };
 
-
   const total = Math.floor(
     cart.reduce((acc, product) => acc + product.price * product.quantity, 0)
   );
+
   return (
     <div className="checkoutContainer">
       <div className="checkout">
         {cart.length !== 0 ? (
           cart.map((product) => (
             <div key={product.id} className="cardCheckout">
-              <img src={product.src} alt="imagen de producto" />
-              <h3>{product.name}</h3>
+              <img src={product.url} alt="imagen de producto" />
+              <h3>{product.title}</h3>
               <p className="quantity">cantidad: {product.quantity}</p>
-              <p className="price">${product.price * product.quantity}</p>
+              <p className="price">${Math.floor(product.price * product.quantity)}</p>
               <p className="x" onClick={handleDelete} id={product.id}>
                 x
               </p>
