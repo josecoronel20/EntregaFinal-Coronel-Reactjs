@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/EntregaFinal-Coronel-Reactjs/static/css/main.204a085b.css",
-    "main.js": "/EntregaFinal-Coronel-Reactjs/static/js/main.752ece47.js",
+    "main.js": "/EntregaFinal-Coronel-Reactjs/static/js/main.f9379b41.js",
     "index.html": "/EntregaFinal-Coronel-Reactjs/index.html",
     "main.204a085b.css.map": "/EntregaFinal-Coronel-Reactjs/static/css/main.204a085b.css.map",
-    "main.752ece47.js.map": "/EntregaFinal-Coronel-Reactjs/static/js/main.752ece47.js.map"
+    "main.f9379b41.js.map": "/EntregaFinal-Coronel-Reactjs/static/js/main.f9379b41.js.map"
   },
   "entrypoints": [
     "static/css/main.204a085b.css",
-    "static/js/main.752ece47.js"
+    "static/js/main.f9379b41.js"
   ]
 }
