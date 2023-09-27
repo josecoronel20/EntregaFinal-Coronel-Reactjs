@@ -3,4 +3,9 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
+    box-sizing: border-box;
+}
+
+.footerContainer{
+    width: 100%;
 }

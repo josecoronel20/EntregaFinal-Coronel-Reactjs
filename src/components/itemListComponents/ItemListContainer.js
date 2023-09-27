@@ -12,23 +12,23 @@ const ItemListContainer = () => {
   const [products] = useContext(ProductsFirebaseContext);
 
   useEffect(() => {
+    let filteredProducts = [...products];
     if (categoryName) {
-      const filteredProducts = products.filter(
+      filteredProducts = filteredProducts.filter(
         (product) => product.category === categoryName
       );
-      setProductsInList(filteredProducts);
-    } else {
-      setProductsInList(productsInList);
     }
-  }, [categoryName]);
+
+    setProductsInList(filteredProducts);
+  }, [categoryName]); 
 
   const location = useLocation();
   const isDetailPage = location.pathname.includes("/item/");
 
   return (
     <div className="itemListContainer">
-      {products.length !== 0 ? (
-        products.map((product) => (
+      {productsInList.length !== 0 ? (
+        productsInList.map((product) => (
           <ItemList
             styleCard="card"
             src={product.url}

@@ -4,6 +4,8 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 export const ProductsFirebaseContext = createContext(null);
 
 export const ProductsFirebaseProvider = ({ children }) => {
+
+  
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

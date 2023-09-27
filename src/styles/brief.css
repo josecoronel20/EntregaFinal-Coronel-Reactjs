@@ -1,0 +1,15 @@
+.brief{
+    box-sizing: border-box;
+    padding: 10rem 1rem 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+}
+
+.brief input{
+    padding: .5rem;
+    border-radius: 10px;
+}

@@ -3,6 +3,7 @@ import { CartWidgetContext } from "../context/CartWidgetContext";
 import { useContext } from "react";
 import "../styles/checkout.css";
 import BuyBtn from "../components/checkoutComponents/BuyBtn";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const [cart, setCart] = useContext(CartWidgetContext);
@@ -36,7 +37,9 @@ const Checkout = () => {
               <img src={product.url} alt="imagen de producto" />
               <h3>{product.title}</h3>
               <p className="quantity">cantidad: {product.quantity}</p>
-              <p className="price">${Math.floor(product.price * product.quantity)}</p>
+              <p className="price">
+                ${Math.floor(product.price * product.quantity)}
+              </p>
               <p className="x" onClick={handleDelete} id={product.id}>
                 x
               </p>
@@ -46,7 +49,9 @@ const Checkout = () => {
           <p>el carrito está vacío</p>
         )}
         <p>TOTAL: ${total}</p>
-        <BuyBtn />
+        <Link to={"/brief"}>
+          <button className="buyBtn">Continuar con la compra</button>
+        </Link>
       </div>
     </div>
   );
